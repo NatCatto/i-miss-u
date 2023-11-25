@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miss You Popup with GIF Background</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: purple;
+            background: url('https://i.gifer.com/3uvT.gif') center center fixed; /* Set the background GIF */
+            background-size: cover; /* Cover the entire viewport */
+        }
 
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #openPopup {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #e44d26;
+            color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 5px;
+        }
+
+        #popup img {
+            width: 100%; /* Make the GIF fill the container */
+            border-radius: 10px; /* Add rounded corners to the image */
+            margin-top: 10px; /* Add some space between text and image */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="openPopup" onclick="openPopup()">I Miss You <3 </button>
+
+    <div id="popup">
+        <h2>Hehehe</h2>
+        <p>Time for kissies o_o.</p>
+        <img src="https://i.gifer.com/B835.gif" >
+        <button onclick="closePopup()">Dnt go :(</button>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
